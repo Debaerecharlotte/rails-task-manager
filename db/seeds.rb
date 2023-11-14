@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+10.times do
+  title = Faker::Movie.title
+  description = Faker::Quote.famous_last_words
+  Task.create(title: title, details: description)
+end
